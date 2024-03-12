@@ -205,7 +205,12 @@ psychobabble = [
       "Please consider whether you can answer your own question.",
       "Perhaps the answer lies within yourself?",
       "Why don't you tell me?"]],
-      
+
+    [r'exit',
+     ["Thank you for talking with me.",
+      "Good-bye.",
+      "Thank you, that will be $150.  Have a good day!"]],  
+    
     [r'quit',
      ["Thank you for talking with me.",
       "Good-bye.",
@@ -243,7 +248,7 @@ def main():
     while True:
         statement = input("> ")
         print (analyze(statement))
-        if statement == "quit":
+        if statement == "quit" or "exit":
             break
             
 if __name__ == "__main__":
